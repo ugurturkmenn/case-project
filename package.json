@@ -21,7 +21,7 @@
     "url": "https://github.com/ugurturkmenn/case-project/issues"
   },
   "homepage": ".",
-  "proxy": "http://localhost:3000",
+  "proxy": "https://case-project-jet.vercel.app",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
