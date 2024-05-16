@@ -1,0 +1,71 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "__dirname": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "**/tsconfig.json"
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "jsx-a11y", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error", {}, {
+      "usePrettierrc": true
+    }],
+    "indent": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-indent": ["error", 2],
+    "react/prop-types": [2, {
+      "ignore": ["history"]
+    }],
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-filename-extension": [1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/no-set-state": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prefer-promise-reject-errors": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^",
+        "varsIgnorePattern": "^",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  }
+}
