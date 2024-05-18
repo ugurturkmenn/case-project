@@ -23,7 +23,8 @@ export const useCalendar = (): ICalendar => {
     try {
       setFethcCalendarApiStatus(ApiStatus.LOADING);
 
-      const apiUrl = process.env.REACT_APP_API_URL;
+      const apiUrl = process.env.REACT_APP_CASE_API_URL;
+      // const apiUrl = "https://nesine-case-study.onrender.com/bets";
 
       if (apiUrl) {
         const response: BetData[] = await fetch(apiUrl).then((res) =>
